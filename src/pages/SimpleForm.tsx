@@ -10,21 +10,11 @@ import {
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import SmallInfo from "@/components/SmallInfo";
 import Dialog from "@/components/Dialog";
+import Link from "next/link";
 
 const SimpleForm = async () => {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
-//   const router = useRouter();
-
-  const handleExplore = (e: any) => {
-    e.preventDefault();
-
-    // if (user) {
-    //   router.push("/dashboard");
-    // } else {
-    //   <Dialog />;
-    // }
-  };
 
   return (
     <div className="relative font-title">
@@ -71,12 +61,24 @@ const SimpleForm = async () => {
             <p className="text-4xl text-black font-semibold  z-[9] ">
               Demystifying Legal Jargon for All
             </p>
+            {
+              user ?
             <Button
-              
               className="z-[99] my-5 text-xl font-bold hover:bg-yellow-400 hover:text-black p-5"
             >
+              <Link href="https://www.youtube.com/" target="_blank">
+              
               Explore More
+              </Link>
+            </Button> : <Button 
+              className="z-[99] my-5 text-xl font-bold hover:bg-yellow-400 hover:text-black p-5"
+            >
+              
+              
+              <LoginLink>Login To Explore</LoginLink>
             </Button>
+            }
+
             <div className="absolute inset-0 bottom-0 h-full w-full bg-gradient-to-t from-white to-transparent blur-lg pointer-events-none"></div>
           </div>
         </div>
