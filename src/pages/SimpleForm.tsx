@@ -20,7 +20,7 @@ const SimpleForm = async () => {
     <div className="relative font-title">
       {user ? (
         <div className="relative  text-white font-bold text-lg">
-          <span className="absolute z-[999] left-1/2 top-2 -translate-x-8">
+          <span className="absolute z-[999] left-1/2 top-2 -translate-x-20 text-3xl">
             Hey {user.given_name} !
           </span>
           <Button className="absolute z-[999] top-2 right-4 hover:text-white bg-white text-black font-bold text-lg">
