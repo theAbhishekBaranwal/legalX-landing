@@ -66,7 +66,7 @@ const SimpleForm = async () => {
             <Button
               className="z-[99] my-5 text-xl font-bold bg-yellow-400 text-black hover:bg-black hover:text-white p-5"
             >
-              <Link href="https://www.youtube.com/" target="_blank">
+              <Link href="http://13.235.73.131/ask">
               
               Explore More
               </Link>
